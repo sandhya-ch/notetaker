@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>Notetaker</title>
+    </head>
+    <body>
+        <h1><a href="/">Notetaker</a></h1>
+        <a href="{% url 'note_edit' pk=note.pk %}">Edit post</a>
+        <a href="{% url 'note_remove' pk=note.pk %}">delete</a>
+        <h2>{{ note.title }}</h2>
+        <p>{{ note.text }}</p>
+        <p>{{ note.created_date }}</p>
+        <p>{{ note.modefied_date }}</p>
+    </body>
+</html>  

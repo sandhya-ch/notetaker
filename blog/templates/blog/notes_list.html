@@ -5,7 +5,7 @@
     <body>
         <h1><a href="/">Notetaker</a></h1>
         {% for note in notes %}
-        <h2>{{ note.title }}</h2>
+        <h2><a href="{% url 'note_detail' pk=note.pk %}" >{{note.title }}</a></h2>
         <p>{{ note.text }}</p>
         <p>{{ note.created_date }}</p>
         {% endfor %}
