@@ -6,6 +6,8 @@
         <h1><a href="/">Notetaker</a></h1>
         <a href="{% url 'note_edit' pk=note.pk %}">Edit post</a>
         <a href="{% url 'note_remove' pk=note.pk %}">delete</a>
+        <a href="{% url 'logout' %}">logout</a>
+        <a href="{% url 'note_new' %}">NEW NOTES</a>
         <h2>{{ note.title }}</h2>
         <p>{{ note.text }}</p>
         <p>{{ note.created_date }}</p>

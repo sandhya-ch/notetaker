@@ -4,6 +4,8 @@
     </head>
     <body>
         <h1><a href="/">Notetaker</a></h1>
+        <a href="{% url 'logout' %}">logout</a>
+        <a href="{% url 'note_new' %}">NEW NOTES</a>
         {% for note in notes %}
         <h2><a href="{% url 'note_detail' pk=note.pk %}" >{{note.title }}</a></h2>
         <p>{{ note.text }}</p>
